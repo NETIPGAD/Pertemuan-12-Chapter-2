@@ -1,7 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt") // Tambahkan ini
+//    id("kotlin-kapt") // Tambahkan ini
+    id("com.google.devtools.ksp") version "1.9.0-1.0.13"
 }
 
 android {
@@ -50,7 +51,8 @@ dependencies {
     implementation("androidx.cardview:cardview:1.0.0")
     implementation("androidx.recyclerview:recyclerview:1.4.0")
     implementation("androidx.room:room-runtime:2.6.1") // Downgrade ke 2.5.2
-    kapt("androidx.room:room-compiler:2.6.1") // Downgrade ke 2.5.2
+//    kapt("androidx.room:room-compiler:2.6.1") // Downgrade ke 2.5.2
+    ksp("androidx.room:room-compiler:2.5.0")
     implementation("androidx.room:room-ktx:2.6.1") // Downgrade ke 2.5.2
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.2.1")
